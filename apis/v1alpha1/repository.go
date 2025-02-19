@@ -29,12 +29,15 @@ type RepositorySpec struct {
 	// Public Gallery. The repository name can be specified on its own (for example
 	// nginx-web-app) or prepended with a namespace to group the repository into
 	// a category (for example project-a/nginx-web-app).
+
 	// +kubebuilder:validation:Required
+
 	Name *string `json:"name"`
 	// The metadata that you apply to each repository to help categorize and organize
 	// your repositories. Each tag consists of a key and an optional value. You
 	// define both of them. Tag keys can have a maximum character length of 128
 	// characters, and tag values can have a maximum length of 256 characters.
+
 	Tags []*Tag `json:"tags,omitempty"`
 }
 
@@ -45,7 +48,7 @@ type RepositoryStatus struct {
 	// constructed ARN for the resource
 	// +kubebuilder:validation:Optional
 	ACKResourceMetadata *ackv1alpha1.ResourceMetadata `json:"ackResourceMetadata"`
-	// All CRS managed by ACK have a common `Status.Conditions` member that
+	// All CRs managed by ACK have a common `Status.Conditions` member that
 	// contains a collection of `ackv1alpha1.Condition` objects that describe
 	// the various terminal states of the CR and its backend AWS service API
 	// resource
