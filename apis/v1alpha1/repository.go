@@ -29,6 +29,8 @@ type RepositorySpec struct {
 	// Public Gallery. The repository name can be specified on its own (for example
 	// nginx-web-app) or prepended with a namespace to group the repository into
 	// a category (for example project-a/nginx-web-app).
+	//
+	// Regex Pattern: `^(?:[a-z0-9]+(?:[._-][a-z0-9]+)*/)*[a-z0-9]+(?:[._-][a-z0-9]+)*$`
 	// +kubebuilder:validation:Required
 	Name *string `json:"name"`
 	// The metadata that you apply to each repository to help categorize and organize
@@ -56,6 +58,8 @@ type RepositoryStatus struct {
 	CreatedAt *metav1.Time `json:"createdAt,omitempty"`
 	// The Amazon Web Services account ID that's associated with the public registry
 	// that contains the repository.
+	//
+	// Regex Pattern: `^[0-9]{12}$`
 	// +kubebuilder:validation:Optional
 	RegistryID *string `json:"registryID,omitempty"`
 	// The URI for the repository. You can use this URI for container image push

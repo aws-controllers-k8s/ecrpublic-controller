@@ -48,6 +48,8 @@ spec:
                   Public Gallery. The repository name can be specified on its own (for example
                   nginx-web-app) or prepended with a namespace to group the repository into
                   a category (for example project-a/nginx-web-app).
+
+                  Regex Pattern: `^(?:[a-z0-9]+(?:[._-][a-z0-9]+)*/)*[a-z0-9]+(?:[._-][a-z0-9]+)*$`
                 type: string
               tags:
                 description: |-
@@ -147,6 +149,8 @@ spec:
                 description: |-
                   The Amazon Web Services account ID that's associated with the public registry
                   that contains the repository.
+
+                  Regex Pattern: `^[0-9]{12}$`
                 type: string
               repositoryURI:
                 description: |-
