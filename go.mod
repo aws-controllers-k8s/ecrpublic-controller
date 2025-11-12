@@ -3,7 +3,7 @@ module github.com/aws-controllers-k8s/ecrpublic-controller
 go 1.24.0
 
 require (
-	github.com/aws-controllers-k8s/runtime v0.52.0
+	github.com/aws-controllers-k8s/runtime v0.53.0
 	github.com/aws/aws-sdk-go v1.55.5
 	github.com/aws/aws-sdk-go-v2 v1.36.0
 	github.com/aws/aws-sdk-go-v2/service/ecrpublic v1.31.1
